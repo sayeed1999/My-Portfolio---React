@@ -1,0 +1,47 @@
+/* skills section */
+
+/* i tried to apply flexbox to skills section, but i couldn't. i don't know why */
+
+.skills .skills-center .skill {
+    width: 15%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.skills .skills-center .skill img {
+    cursor: pointer;
+    width: 36px;
+    height: 100%;
+}
+
+.skills .skills-center .skill h2 {
+    font-size: 16px;
+}
+
+.skill-icon:hover {
+    transition: transform 1.6s ease;
+    transform: translateY(-20px);
+}
+.skill > img:hover {
+    transition: transform 1.6s ease;
+    transform: translateY(-20px);
+}
+
+@media screen and (max-width: 576px) {
+    .skills .skills-center {
+        margin-right: 50px;
+    }
+    .skills .skills-center .skill {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .skills .skills-center {
+        margin-right: 30px;
+    }
+    .skills .skills-center .skill {
+        width: 30%;
+    }
+}

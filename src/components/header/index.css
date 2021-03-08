@@ -1,0 +1,244 @@
+/* header section */
+
+.logo {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    color: navy;
+    padding-left: 20px;
+    font-size: 26px;
+}
+
+header .nav-background {
+    background: #eee;
+    width: 100%;
+    height: 80px;
+    z-index: 4;
+    position: fixed;
+    top: 4px;
+    opacity: 0.7;
+}
+
+header .header-background {
+    z-index: 1;
+    background: url(developer.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 8px;
+    opacity: 0.6;
+}
+
+header nav {
+    position: fixed;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    z-index: 5;
+    transition: all .3s ease;
+    background: transparent;
+}
+
+header nav ul.navigation {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 26px;
+    padding: 0;
+}
+
+header nav ul.navigation li {
+    float: left;
+    padding: 0 16px;
+    height: 36px;
+}
+
+header nav ul.navigation li a {
+    margin-right: 40px;
+    color: dodgerblue;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header nav ul.navigation li:last-child a {
+    margin-right: 0;
+}
+
+header nav ul.navigation li a:after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 0;
+    background:chocolate;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+header nav ul.navigation li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+header .icon-menu {
+    z-index: 4;
+    padding: 12px 22px;
+    margin: 15px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+header .icon-menu {
+    border: solid 2px white;
+    border-radius: 25%;
+}
+
+header .icon-menu:hover {
+    background: rgba(30,30,30,0.1);
+}
+
+header .icon-menu:active {
+    color: dodgerblue;
+    background: rgba(156, 219, 255, 0.438);
+}
+
+@media screen and (max-width: 992px) {
+    header nav ul.navigation li {
+        padding: 0 8px;
+    }
+}
+
+@media screen and (max-width: 796px) {
+    header nav ul.navigation li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 683px) {
+    header nav ul.navigation {
+        margin: 0 10px;
+    }
+    header nav ul.navigation li {
+        padding: 0 4px;
+    }
+}
+
+@media screen and (max-width: 604px) {
+    header nav .logo {
+        display: none;
+    }
+    header .header-background {
+        top: 0;
+    }
+    header .nav-background {
+        top: 0;
+        height: 100vh;
+        opacity: 0.6;
+    }
+    header nav ul.navigation {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        width: 70vw;
+        margin: 30vh auto;
+        transform: translateX(-10vw);
+    }
+    header nav ul.navigation li:hover {
+        background-color: floralwhite;
+    }
+    header nav ul.navigation li a {
+        font-size: 22px;
+        font-weight: 600;
+        color:rgb(10, 102, 194);
+        text-shadow: 1.5px 1.5px snow;
+    }
+    header .icon-menu {
+        z-index: 5;
+        display: inline-block;
+        position: fixed;
+        right: 0;
+    }
+    header nav ul.navigation li a:active:after {
+        width: 100%;
+        opacity: 1;
+    }
+    header .icon-menu i {
+        font-size: 26px;
+        text-shadow: 2px 1px white;
+    }
+
+}
+
+header .sidebar {
+    background: rgb(206, 206, 206);
+    position: fixed;
+    top: 35vh;
+    right: 0;
+    z-index: 3;
+    border-radius: 16px;
+    text-align: center;
+}
+
+header .sidebar .social-icons .icon {
+    font-size: 36px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+header .sidebar .social-icons .icon:hover {
+    transition: transform 1.6s ease;
+    transform: translateX(-10px);
+}
+
+@media screen and (max-width: 604px) {
+    header .sidebar .social-icons .icon:active {
+        transition: transform .6s ease;
+        transform: translateX(-10px);
+    }
+}
+
+.facebook { color: rgb(56, 88, 152); }
+.linkedin { color: rgb(10, 102, 194); }
+.gmail { color:darkred; }
+.youtube{ color: rgb(255, 0, 0); }
+
+
+header .header-text {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* at the center of row */
+    align-items: center; /* at the center of column */
+    position: relative;
+    z-index: 1;
+}
+
+header .header-text h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color:firebrick;
+    text-shadow: 1px 1px white;
+}
+
+header .header-text p {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    text-shadow: 0.5px 0.5px white;
+}
+
+header .header-text span {
+    font-weight: 600;
+    color: white;
+    text-shadow: 1.5px 1.5px black;
+}
+
+@media screen and (max-width: 1048px) {
+    header .header-text h1 , header .header-text p {
+        padding-left: 30px;
+        padding-right: 60px;
+    }
+}

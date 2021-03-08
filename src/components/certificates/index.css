@@ -1,0 +1,40 @@
+/* certficate section */
+
+.certificates-center {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.certificate {
+    width: 400px;
+    height: 100%;
+}
+
+.certificate img {
+    width: 100%;
+    transition: all .6s ease;
+    padding: 10px 10px;
+}
+
+.certificate img:hover {
+    transform: scale(1.6);
+}
+
+@media screen and (max-width: 776px) {
+    .certificate img:hover {
+        transform: scale(1.45);
+    }
+}
+@media screen and (max-width: 576px) {
+    .certificate {
+        width: 86%;
+        transform: translateX(-20px);
+    }
+    .certificate img:hover {
+        transform: scale(1.4);
+    }
+}

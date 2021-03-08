@@ -1,0 +1,13 @@
+/* about section */
+
+.about-center p {
+    font-style: italic;
+    text-indent: 80px;
+    text-align: justify;
+    padding: 10px 60px 10px 30px;
+    color: lightseagreen;
+    text-shadow: 1px 1px black;
+    font-size: 22px;
+    font-weight: 600;
+}
+
